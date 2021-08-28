@@ -7,6 +7,8 @@ services:
       - ./:/usr/src/app
     working_dir: /usr/src/app
     command: node .
+    environment:
+      - PORT=9090
     ports:
       - 9090:9090
 
