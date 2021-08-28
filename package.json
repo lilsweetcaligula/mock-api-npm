@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "npm-api-mock",
+  "name": "mock-api-npm",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
