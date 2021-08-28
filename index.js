@@ -2,7 +2,7 @@ require('dotenv').config()
 
 const Express = require('express')
 const Morgan = require('morgan')
-const Store = require('./devassets/pkgs.json')
+const Store = require('./lib/pkgs.json')
 const Faker = require('faker')
 const Moment = require('moment')
 
