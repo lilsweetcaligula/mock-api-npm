@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const Express = require('express')
 const Morgan = require('morgan')
 const Store = require('./devassets/pkgs.json')
@@ -113,7 +115,13 @@ app.get('/downloads/range/:interval/:pkg_name', (req, res) => {
 })
 
 
-const server = app.listen(9090, () => {
+const port = process.env.PORT
+
+if (null == port) {
+  throw new Error('missing PORT env var')
+}
+
+const server = app.listen(port, () => {
   console.log('npm API mock server is listening at %j',
     server.address())
 })
